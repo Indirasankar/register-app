@@ -6,12 +6,12 @@ pipeline {
     }
 	environment{
 		 APP_NAME = "register-app-pipeline"
-            RELEASE = "1.0.0"
-            DOCKER_USER = "indsanra2012"
-            DOCKER_PASS = 'Hiindira@31'
-            IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
-            IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
-	    JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")
+                 RELEASE = "1.0.0"
+                 DOCKER_USER = "indsanra2012"
+                 DOCKER_PASS = 'Hiindira@31'
+                IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
+                IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
+	   
 	}
 	stages{
 		stage("Cleanup Workspace"){
